@@ -1,3 +1,11 @@
+# Sourcing data using SSR from the US National Weather Service API
+
+👀 See the preview: [https://](https://)
+
+📝 Read the post on the Gatsby Blog: [Sourcing data using SSR from the US National Weather Service API](https://)
+
+⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
+
 <p align="center">
   <a href="https://www.gatsbyjs.com">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
