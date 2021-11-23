@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import axios from 'axios';
 
+// 1. add Gatsby branding
+// 2. monogram logo
+
 const Page = ({ serverData }) => {
   const { city, date, time, forecast, error } = serverData;
 
@@ -19,7 +22,7 @@ const Page = ({ serverData }) => {
       ) : (
         <Fragment>
           <div>
-            <h1 className="text-4xl font-black">
+            <h1 className="text-4xl font-black text-brand-primary">
               {`${city} Weather Forecast`}
             </h1>
             <h2 className="text-md text-gray-500">

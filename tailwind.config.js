@@ -3,6 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        brand: {
+          default: '#663399',
+          primary: '#7026B9'
+        }
+      },
       gridTemplateColumns: {
         ['auto-auto']: 'auto auto'
       }
