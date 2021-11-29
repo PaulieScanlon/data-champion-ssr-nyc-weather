@@ -1,8 +1,4 @@
 import React, { Fragment } from 'react';
-import axios from 'axios';
-
-// 1. add Gatsby branding
-// 2. monogram logo
 
 const Page = ({ serverData }) => {
   const { city, date, time, forecast, error } = serverData;
@@ -22,7 +18,7 @@ const Page = ({ serverData }) => {
       ) : (
         <Fragment>
           <div>
-            <h1 className="text-4xl font-black text-brand-primary">
+            <h1 className="text-4xl font-black text-brand-p">
               {`${city} Weather Forecast`}
             </h1>
             <h2 className="text-md text-gray-500">
@@ -97,24 +93,21 @@ export async function getServerData() {
   const LONGITUDE = '-73.935242';
 
   try {
-    const response = await axios(
-      `https://api.weather.gov/points/${LATITUDE},${LONGITUDE}`,
-      {
-        method: 'GET'
-      }
-    );
+    const response = await fetch(
+      `https://api.weather.gov/points/${LATITUDE},${LONGITUDE}`
+    ).then((res) => res.json());
 
-    const forecast = await axios(response.data.properties.forecast, {
-      method: 'GET'
-    });
+    const forecast = await fetch(response.properties.forecast).then((res) =>
+      res.json()
+    );
 
     return {
       status: 200,
       props: {
-        city: response.data.properties.relativeLocation.properties.city,
-        date: new Date(forecast.data.properties.updated).toLocaleDateString(),
-        time: new Date(forecast.data.properties.updated).toLocaleTimeString(),
-        forecast: forecast.data.properties.periods
+        city: response.properties.relativeLocation.properties.city,
+        date: new Date(forecast.properties.updated).toLocaleDateString(),
+        time: new Date(forecast.properties.updated).toLocaleTimeString(),
+        forecast: forecast.properties.periods
       }
     };
   } catch (error) {

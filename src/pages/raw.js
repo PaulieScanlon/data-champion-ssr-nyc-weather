@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 const Page = ({ serverData }) => {
   return (
@@ -16,24 +15,21 @@ export async function getServerData() {
   const LONGITUDE = '-73.935242';
 
   try {
-    const response = await axios(
-      `https://api.weather.gov/points/${LATITUDE},${LONGITUDE}`,
-      {
-        method: 'GET'
-      }
-    );
+    const response = await fetch(
+      `https://api.weather.gov/points/${LATITUDE},${LONGITUDE}`
+    ).then((res) => res.json());
 
-    const forecast = await axios(response.data.properties.forecast, {
-      method: 'GET'
-    });
+    const forecast = await fetch(response.properties.forecast).then((res) =>
+      res.json()
+    );
 
     return {
       status: 200,
       props: {
-        city: response.data.properties.relativeLocation.properties.city,
-        date: new Date(forecast.data.properties.updated).toLocaleDateString(),
-        time: new Date(forecast.data.properties.updated).toLocaleTimeString(),
-        forecast: forecast.data.properties.periods
+        city: response.properties.relativeLocation.properties.city,
+        date: new Date(forecast.properties.updated).toLocaleDateString(),
+        time: new Date(forecast.properties.updated).toLocaleTimeString(),
+        forecast: forecast.properties.periods
       }
     };
   } catch (error) {
