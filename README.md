@@ -1,4 +1,4 @@
-# Sourcing data using SSR from the US National Weather Service API
+# Fetch data from the US National Weather Service API using SSR
 
 👀 See the preview: [https://](https://)
 
