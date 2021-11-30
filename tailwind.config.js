@@ -10,7 +10,7 @@ module.exports = {
         }
       },
       gridTemplateColumns: {
-        ['auto-auto']: 'auto auto'
+        ['auto-1fr']: 'auto 1fr'
       }
     }
   },
