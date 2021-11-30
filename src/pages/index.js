@@ -36,7 +36,7 @@ const Page = ({ serverData }) => {
               <span className="font-black">{`on ${date} @${time}`}</span>
             </div>
           </div>
-          <ul className="grid gap-8 lg:grid-cols-2">
+          <ul className="grid gap-8 md:grid-cols-2">
             {forecast.map((item, index) => {
               const {
                 name,
@@ -51,10 +51,10 @@ const Page = ({ serverData }) => {
               return (
                 <li
                   key={index}
-                  className="p-6 grid gap-4 bg-gray-50 shadow rounded-md"
+                  className="flex flex-col p-6 bg-gray-50 shadow rounded-md"
                 >
-                  <div className="grid grid-cols-auto-1fr gap-2 items-center">
-                    <div className="text-5xl leading-5">
+                  <div className="grid grid-cols-auto-1fr gap-2 mb-4">
+                    <div className="text-5xl">
                       {isDaytime ? (
                         <span role="img" aria-label="Full Moon Face">
                           🌝
@@ -76,7 +76,9 @@ const Page = ({ serverData }) => {
                     </div>
                   </div>
 
-                  <p className="text-2xl font-black">{shortForecast}</p>
+                  <p className="text-2xl font-black flex-grow mb-4">
+                    {shortForecast}
+                  </p>
                   <div className="text-sm text-gray-500">
                     <div>{`Temperature: ${temperature} ${temperatureUnit}`}</div>
                     <div>{`Wind: ${windSpeed} ${windDirection}`}</div>
