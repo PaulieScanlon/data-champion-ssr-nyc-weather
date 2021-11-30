@@ -6,10 +6,10 @@ const Page = ({ serverData }) => {
   return (
     <main className="container mx-auto max-w-5xl grid gap-16 p-8">
       {error ? (
-        <div className="bg-red-500 rounded shadow p-6 grid gap-4 text-white grid gap-2">
+        <div className="bg-red-500 rounded shadow p-6 text-white items-center">
           <div>
-            <h2 className="text-lg font-black">Blast!</h2>
-            <p>There's been an error</p>
+            <h2 className="text-5xl font-black">Blast!</h2>
+            <p>There's been an error.</p>
           </div>
           <div>
             <p className="italic">{error.message}</p>
