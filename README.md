@@ -1,8 +1,8 @@
-# Fetch data from the US National Weather Service API using SSR
+# TBC
 
 👀 See the preview: [https://](https://)
 
-📝 Read the post on the Gatsby Blog: [Sourcing data using SSR from the US National Weather Service API](https://)
+📝 Read the post on the Gatsby Blog: [...](https://)
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
 
