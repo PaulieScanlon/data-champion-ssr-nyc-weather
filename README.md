@@ -1,8 +1,8 @@
 # TBC
 
-👀 See the preview: [https://](https://)
+👀 See the preview: [https://datachampionssrnycweather.gatsbyjs.io](https://datachampionssrnycweather.gatsbyjs.io/)
 
-📝 Read the post on the Gatsby Blog: [...](https://)
+📝 Read the post on the Gatsby Blog: [Fetch data from the US National Weather Service API using SSR](https://www.gatsbyjs.com/blog/fetch-data-from-the-us-national-weather-service-api-using-ssr)
 
 ⚙️ This repo is based on [Gatsby's minimal demo](https://github.com/gatsby-inc/gatsby-demo-minimal)
 
