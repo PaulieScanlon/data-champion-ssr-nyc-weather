@@ -1,4 +1,4 @@
-# TBC
+# Fetch data from the US National Weather Service API using SSR
 
 👀 See the preview: [https://datachampionssrnycweather.gatsbyjs.io](https://datachampionssrnycweather.gatsbyjs.io/)
 
